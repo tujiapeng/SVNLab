@@ -1,0 +1,124 @@
+/* eslint-disable vue/multi-word-component-names */
+// eslint-disable-next-line vue/multi-word-component-names
+<template>
+  <!-- 菜单 -->
+  <div id="header" class="flex bg-gray-100 border-b-2">
+    <!-- admin menu  -->
+    <div id="title-container" class="flex w-1/2 items-end">
+      <div id="site-logo" class="ml-3 mt-5">
+        <p class="text-4xl font-bold">SVNLab</p>
+      </div>
+      <div id="header-menu" class="flex">
+        <ul class="flex text-lg">
+          <li>
+            <button
+              type="button"
+              class="ml-3 pl-2 pr-2 rounded hover:bg-gray-300"
+            >
+              Project
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="ml-3 pl-2 pr-2 rounded hover:bg-gray-300"
+            >
+              Groups
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="ml-3 pl-2 pr-2 rounded hover:bg-gray-300"
+            >
+              More.
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="ml-3 pl-2 pr-2 rounded hover:bg-gray-300"
+            >
+              AdminCenter
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- nav  -->
+    <div id="navbar-collapse" class="flex w-1/2 justify-end items-end">
+      <ul class="flex text-lg">
+        <li>
+          <button
+            type="button"
+            class="mr-3 pl-2 pr-2 rounded hover:bg-gray-300"
+          >
+            New
+          </button>
+        </li>
+        <li>
+          <div id="top-search">
+            <input
+              type="search"
+              name="topsearchbar"
+              id="top-search-bar"
+              placeholder="search project"
+              class="
+                mr-3
+                text-lg
+                border border-gray-400
+                rounded
+                focus:outline-none focus:border-sky-500
+              "
+            />
+          </div>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="mr-3 pl-2 pr-2 rounded hover:bg-gray-300"
+          >
+            issue
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="mr-3 pl-2 pr-2 rounded hover:bg-gray-300"
+          >
+            Todo
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="mr-3 pl-2 pr-2 rounded hover:bg-gray-300"
+          >
+            Help
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="
+              mr-3
+              pl-2
+              pr-2
+              rounded-full
+              w-28
+              truncate
+              bg-indigo-300
+              hover:bg-blue-500 hover:text-white
+            "
+          >
+            John-Weak
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script setup></script>
+
+<style></style>

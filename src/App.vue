@@ -1,7 +1,11 @@
 <template>
-    <h1>hello, vue</h1>
+    <Header />
+    <Projects />
 </template>
 
-<script setup></script>
+<script setup>
+import Header from './components/Header.vue';
+import Projects from './components/Projects.vue';
+</script>
 
 <style></style>
