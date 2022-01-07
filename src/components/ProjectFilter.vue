@@ -3,8 +3,7 @@
   <div
     class="
       mt-5
-      ml-10
-      mr-10
+      mx-10
       text-xl
       font-medium
       items-center

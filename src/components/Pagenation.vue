@@ -6,8 +6,7 @@
       <li>
         <button
           class="
-            pl-1
-            pr-1
+            px-1
             border border-gray-200
             rounded-l-md
             hover:bg-gray-300
@@ -19,8 +18,7 @@
       <li>
         <button
           class="
-            pl-1
-            pr-1
+            px-1
             border border-gray-200
             rounded-r-md
             hover:bg-gray-300

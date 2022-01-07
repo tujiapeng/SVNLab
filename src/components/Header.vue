@@ -51,7 +51,7 @@
         <li>
           <button
             type="button"
-            class="mr-3 pl-2 pr-2 rounded hover:bg-gray-300"
+            class="mr-1 px-1 rounded hover:bg-gray-300"
           >
             New
           </button>
@@ -64,7 +64,7 @@
               id="top-search-bar"
               placeholder="search project"
               class="
-                mr-3
+                mr-1
                 text-lg
                 border border-gray-400
                 rounded
@@ -76,7 +76,7 @@
         <li>
           <button
             type="button"
-            class="mr-3 pl-2 pr-2 rounded hover:bg-gray-300"
+            class="mr-1 px-1 rounded hover:bg-gray-300"
           >
             issue
           </button>
@@ -84,7 +84,7 @@
         <li>
           <button
             type="button"
-            class="mr-3 pl-2 pr-2 rounded hover:bg-gray-300"
+            class="mr-1 px-1 rounded hover:bg-gray-300"
           >
             Todo
           </button>
@@ -92,7 +92,7 @@
         <li>
           <button
             type="button"
-            class="mr-3 pl-2 pr-2 rounded hover:bg-gray-300"
+            class="mr-1 px-1 rounded hover:bg-gray-300"
           >
             Help
           </button>
@@ -102,8 +102,7 @@
             type="button"
             class="
               mr-3
-              pl-2
-              pr-2
+              px-1
               rounded-full
               w-28
               truncate
