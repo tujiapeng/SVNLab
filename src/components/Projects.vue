@@ -12,20 +12,25 @@
         <!-- 项目筛选器 -->
         <ProjectFilter />
         <!-- 项目列表 -->
-        <div v-for="project in projectList" :key="project.id" class="mt-5 mx-10 divide-y divide-gray-400">
-          <ProjectList
-          :projectName="project.name"
-          :namesapce="project.namespace"
-          :namespaceUrl="project._links.namesapce"
-          :web_url="project.web_url"
-          :role="project.owner.name"
-          :description="project.description"
-          :star_count="project.star_count"
-          :member_count="project.member_count"
-          :webhooks_acount="project.webhooks_acount"
-          :open_issues_count="project.open_issues_count"
-          :repository_size="project.statistics.repository_size"
-          :last_activity_on="project.last_activity_on"
+        <!-- project list holder -->
+        <div
+          v-for="project in projectList"
+          :key="project.id"
+          class="mt-5 mx-10 divide-y divide-gray-400"
+        >
+          <ProjectItem
+            :projectName="project.name"
+            :namesapce="project.namespace"
+            :namespaceUrl="project._links.namesapce"
+            :web_url="project.web_url"
+            :role="project.owner.name"
+            :description="project.description"
+            :star_count="project.star_count"
+            :member_count="project.member_count"
+            :webhooks_acount="project.webhooks_acount"
+            :open_issues_count="project.open_issues_count"
+            :repository_size="project.statistics.repository_size"
+            :last_activity_on="project.last_activity_on"
           />
         </div>
         <!-- 页码 -->
@@ -36,9 +41,9 @@
 </template>
 
 <script setup>
-import ProjectFilter from './ProjectFilter.vue';
-import ProjectList from './ProjectList.vue';
-import Pagenation from './Pagenation.vue';
+import ProjectFilter from "./ProjectFilter.vue";
+import ProjectItem from "./ProjectItem.vue";
+import Pagenation from "./Pagenation.vue";
 
 const projectList = [
   {
@@ -51,7 +56,8 @@ const projectList = [
     path: "project01-name",
     namespace: "project-namespace",
     name_with_namespace: "project-namespace/project01-name",
-    avatar_url: "http://example.com/uploads/project/avatar/4/uploads/avatar.png",
+    avatar_url:
+      "http://example.com/uploads/project/avatar/4/uploads/avatar.png",
     created_at: "2013-09-30T13:46:02Z",
     last_activity_on: "2013-09-30T13:46:02Z",
     star_count: 0,
@@ -63,7 +69,7 @@ const projectList = [
     owner: {
       id: 4,
       name: "Brightbox",
-      created_at: "2013-09-30T13:46:02Z"
+      created_at: "2013-09-30T13:46:02Z",
     },
     _links: {
       self: "http://example.com/api/v4/projects",
@@ -71,13 +77,13 @@ const projectList = [
       issues: "http://example.com/api/v4/projects/1/issues",
       webhooks: "http://example.com/api/v4/projects/1/webhooks",
       labels: "http://example.com/api/v4/projects/1/labels",
-      members: "http://example.com/api/v4/projects/1/members"
+      members: "http://example.com/api/v4/projects/1/members",
     },
     statistics: {
       commit_count: 12,
       storage_size: 2066080,
       repository_size: 2066080,
-      wiki_size : 0,
+      wiki_size: 0,
     },
   },
   {
@@ -90,7 +96,8 @@ const projectList = [
     path: "project02-name",
     namespace: "project-namespace",
     name_with_namespace: "project-namespace/project01-name",
-    avatar_url: "http://example.com/uploads/project/avatar/4/uploads/avatar.png",
+    avatar_url:
+      "http://example.com/uploads/project/avatar/4/uploads/avatar.png",
     created_at: "2013-09-30T13:46:02Z",
     last_activity_on: "2013-09-30T13:46:02Z",
     star_count: 0,
@@ -101,23 +108,23 @@ const projectList = [
     owner: {
       id: 4,
       name: "Brightbox",
-      created_at: "2013-09-30T13:46:02Z"
+      created_at: "2013-09-30T13:46:02Z",
     },
     _links: {
       self: "http://example.com/api/v4/projects",
       issues: "http://example.com/api/v4/projects/1/issues",
       webhooks: "http://example.com/api/v4/projects/1/webhooks",
       labels: "http://example.com/api/v4/projects/1/labels",
-      members: "http://example.com/api/v4/projects/1/members"
+      members: "http://example.com/api/v4/projects/1/members",
     },
     statistics: {
       commit_count: 12,
       storage_size: 2066080,
       repository_size: 2066080,
-      wiki_size : 0,
+      wiki_size: 0,
     },
   },
-]
+];
 </script>
 
 <style></style>
