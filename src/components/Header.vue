@@ -49,10 +49,7 @@
     <div id="navbar-collapse" class="flex w-1/2 justify-end items-end">
       <ul class="flex text-lg">
         <li>
-          <button
-            type="button"
-            class="mr-1 px-1 rounded hover:bg-gray-300"
-          >
+          <button type="button" class="mr-1 px-1 rounded hover:bg-gray-300">
             New
           </button>
         </li>
@@ -74,26 +71,17 @@
           </div>
         </li>
         <li>
-          <button
-            type="button"
-            class="mr-1 px-1 rounded hover:bg-gray-300"
-          >
+          <button type="button" class="mr-1 px-1 rounded hover:bg-gray-300">
             issue
           </button>
         </li>
         <li>
-          <button
-            type="button"
-            class="mr-1 px-1 rounded hover:bg-gray-300"
-          >
+          <button type="button" class="mr-1 px-1 rounded hover:bg-gray-300">
             Todo
           </button>
         </li>
         <li>
-          <button
-            type="button"
-            class="mr-1 px-1 rounded hover:bg-gray-300"
-          >
+          <button type="button" class="mr-1 px-1 rounded hover:bg-gray-300">
             Help
           </button>
         </li>

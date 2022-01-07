@@ -1,11 +1,8 @@
 <template>
   <!-- project list holder -->
-  <div class="mt-5 mx-10 divide-y divide-gray-400">
+  <!-- <div class="mt-5 mx-10 divide-y divide-gray-400"> -->
     <!-- project 01 -->
-    <ul
-      id="project-list"
-      class="mx-5 flex h-20 items-center justify-between"
-    >
+    <ul id="project-list" class="mx-5 flex h-20 items-center justify-between">
       <!-- li 4 project row 1 -->
       <li>
         <!-- column 1 avator -->
@@ -21,73 +18,76 @@
         <div class="mx-5 h-12 text-sm truncate">
           <!-- upper line -->
           <div class="flex">
-            <a class="max-w-min truncate" href=""
-              >very long goup name very long goup name very long goup name very
-              long goup name very long goup name
+            <a class="max-w-min truncate" :href="namespaceUrl"
+              >{{ namesapce }}
             </a>
             <span>/</span>
-            <a class="max-w-min truncate font-bold" href="">
-              project-name-xx project-name-xx project-name-xx project-name-xx
-              project-name-xx project-name-xx project-name-xx project-name-xx
-              project-name-xx
+            <a class="max-w-min truncate font-bold" :href="web_url">
+              {{ projectName }}
             </a>
             <span
-              class="
-                ml-2
-                bg-blue-500
-                px-1
-                rounded-lg
-                text-center text-white
-              "
-              >developer</span
+              class="ml-2 bg-blue-500 px-1 rounded-lg text-center text-white"
+              >{{ role }}</span
             >
           </div>
           <!-- description text -->
           <div>
             <p class="truncate text-gray-500">
-              project description project description project description
-              project description project description project description
-              project description project description project description
-              project description
+              {{ description }}
             </p>
           </div>
         </div>
       </li>
       <!-- column 3 info -->
       <li class="ml-5 text-sm">
-        <p>0 star</p>
+        <p>{{ star_count }} star</p>
       </li>
       <!-- column 4 -->
       <li class="ml-5 text-sm">
         <div>
-          <p>5 menber</p>
+          <p>{{ member_count }} menber</p>
         </div>
       </li>
       <li class="ml-5 text-sm">
-          <p>0 hooks</p>
+        <p>{{ webhooks_acount }} hooks</p>
       </li>
       <!-- column 5 -->
       <li class="ml-5 text-sm">
         <div>
-          <a href="">5 issue</a>
+          <a href="">{{ open_issues_count }} issue</a>
         </div>
       </li>
       <!-- column 6 -->
       <li class="ml-5 text-sm">
         <div>
-          <a href="">120 MiB</a>
+          <a href="">{{ repository_size }}</a>
         </div>
       </li>
       <!-- column 7 -->
       <li class="ml-5 text-sm">
         <div>
-          <p>更新于 2 周前</p>
+          <p>{{ last_activity_on }}</p>
         </div>
       </li>
     </ul>
-  </div>
+  <!-- </div> -->
 </template>
 
-<script setup></script>
+<script setup>
+defineProps([
+  "projectName",
+  "namesapce",
+  "namespaceUrl",
+  "web_url",
+  "role",
+  "description",
+  "star_count",
+  "member_count",
+  "webhooks_acount",
+  "open_issues_count",
+  "repository_size",
+  "last_activity_on",
+]);
+</script>
 
 <style></style>
