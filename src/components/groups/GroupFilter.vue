@@ -16,36 +16,22 @@
       <ul class="flex w-1/2">
         <li>
           <a href=""
-            >已加入项目<span
-              class="
-                text-sm
-                bg-orange-200
-                w-5
-                inline-block
-                rounded-lg
-                text-center
-              "
+            >已加入的组<span
+              class="text-sm bg-red-200 w-5 inline-block rounded-lg text-center"
               >15</span
             >
           </a>
         </li>
         <li>
           <a class="ml-3" href=""
-            >星标项目<span
-              class="
-                text-sm
-                bg-orange-200
-                w-5
-                inline-block
-                rounded-lg
-                text-center
-              "
+            >我创建的<span
+              class="text-sm bg-red-200 w-5 inline-block rounded-lg text-center"
               >1</span
             >
           </a>
         </li>
         <li>
-          <a class="ml-3" href="">项目所有浏览</a>
+          <a class="ml-3" href="">群组浏览</a>
         </li>
       </ul>
       <!-- filter and sort -->
@@ -68,29 +54,6 @@
         <!-- sort -->
         <button type="button">sort by time</button>
       </div>
-    </div>
-    <!-- sub nav tab -->
-    <div id="sub-nav-tabs" class="flex text-lg h-10 items-center">
-      <ul class="flex">
-        <li>
-          <a href="">所有</a>
-        </li>
-        <li>
-          <a class="ml-3" href=""
-            >个人<span
-              class="
-                text-sm
-                bg-orange-200
-                w-5
-                inline-block
-                rounded-lg
-                text-center
-              "
-              >2</span
-            >
-          </a>
-        </li>
-      </ul>
     </div>
   </div>
 </template>

@@ -1,49 +1,47 @@
 /* eslint-disable vue/multi-word-component-names */
 <template>
-  <div id="main">
-    <!-- 页面 -->
-    <div id="content-body">
-      <!-- content -->
-      <main class="divide-y divide-gray-400">
-        <!-- page title  -->
-        <div class="mt-5 ml-10">
-          <h1 class="text-4xl">项目</h1>
-        </div>
-        <!-- 项目筛选器 -->
-        <ProjectFilter />
-        <!-- 项目列表 -->
-        <!-- project list holder -->
-        <div
-          v-for="project in projectList"
-          :key="project.id"
-          class="mt-5 mx-10 divide-y divide-gray-400"
-        >
-          <ProjectItem
-            :projectName="project.name"
-            :namesapce="project.namespace"
-            :namespaceUrl="project._links.namesapce"
-            :web_url="project.web_url"
-            :role="project.owner.name"
-            :description="project.description"
-            :star_count="project.star_count"
-            :member_count="project.member_count"
-            :webhooks_acount="project.webhooks_acount"
-            :open_issues_count="project.open_issues_count"
-            :repository_size="project.statistics.repository_size"
-            :last_activity_on="project.last_activity_on"
-          />
-        </div>
-        <!-- 页码 -->
-        <Pagenation />
-      </main>
-    </div>
+  <!-- 页面 -->
+  <div id="project-content-body">
+    <!-- content -->
+    <main class="divide-y divide-gray-400">
+      <!-- page title  -->
+      <div class="mt-5 ml-10">
+        <h1 class="text-4xl">项目</h1>
+      </div>
+      <!-- 项目筛选器 -->
+      <ProjectFilter />
+      <!-- 项目列表 -->
+      <!-- project list holder -->
+      <div
+        v-for="project in projectList"
+        :key="project.id"
+        class="my-3 mx-10 divide-y divide-gray-400"
+      >
+        <ProjectItem
+          :projectName="project.name"
+          :namesapce="project.namespace"
+          :namespaceUrl="project._links.namesapce"
+          :web_url="project.web_url"
+          :role="project.owner.name"
+          :description="project.description"
+          :star_count="project.star_count"
+          :member_count="project.member_count"
+          :webhooks_acount="project.webhooks_acount"
+          :open_issues_count="project.open_issues_count"
+          :repository_size="project.statistics.repository_size"
+          :last_activity_on="project.last_activity_on"
+        />
+      </div>
+      <!-- 页码 -->
+      <Pagenation />
+    </main>
   </div>
 </template>
 
 <script setup>
-import ProjectFilter from "./ProjectFilter.vue";
-import ProjectItem from "./ProjectItem.vue";
-import Pagenation from "./Pagenation.vue";
+import ProjectFilter from "@/components/projects/ProjectFilter.vue";
+import ProjectItem from "@/components/projects/ProjectItem.vue";
+import Pagenation from "@/components/Pagenation.vue";
 
 const projectList = [
   {

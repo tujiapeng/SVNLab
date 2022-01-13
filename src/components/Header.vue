@@ -11,20 +11,18 @@
       <div id="header-menu" class="flex">
         <ul class="flex text-lg">
           <li>
-            <button
-              type="button"
+            <router-link to="/projects"
               class="ml-3 pl-2 pr-2 rounded hover:bg-gray-300"
             >
               Project
-            </button>
+            </router-link>
           </li>
           <li>
-            <button
-              type="button"
+            <router-link to="/groups"
               class="ml-3 pl-2 pr-2 rounded hover:bg-gray-300"
             >
               Groups
-            </button>
+            </router-link>
           </li>
           <li>
             <button
