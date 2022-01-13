@@ -1,6 +1,6 @@
 <template>
   <!-- project 01 -->
-  <ul class="mx-5 flex h-10 items-center justify-between">
+  <ul class="mx-5 flex h-12 items-center justify-between">
     <!-- li 4 project row 1 -->
     <li>
       <!-- column 1 avator -->

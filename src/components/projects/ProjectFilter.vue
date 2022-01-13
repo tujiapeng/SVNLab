@@ -24,7 +24,7 @@
         </li>
         <li>
           <a class="ml-3" href=""
-            >星标项目<span
+            >标星项目<span
               class="text-sm bg-red-200 w-5 inline-block rounded-lg text-center"
               >1</span
             >
@@ -63,7 +63,7 @@
         </li>
         <li>
           <a class="ml-3" href=""
-            >个人<span
+            >我创建的<span
               class="text-sm bg-red-200 w-5 inline-block rounded-lg text-center"
               >2</span
             >
