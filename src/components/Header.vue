@@ -6,7 +6,7 @@
     <!-- admin menu  -->
     <div id="title-container" class="flex w-1/2 items-end">
       <div id="site-logo" class="ml-3 mt-5">
-        <p class="text-4xl font-bold">SVNLab</p>
+        <router-link to="/" class="text-4xl font-bold">SVNLab</router-link>
       </div>
       <div id="header-menu" class="flex">
         <ul class="flex text-lg">
