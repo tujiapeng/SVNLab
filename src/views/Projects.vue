@@ -48,7 +48,7 @@ const projectList = [
     id: 4,
     description: "some description some description some description",
     http_url_to_repo: "http://example.com/diaspora/diaspora-client.git",
-    web_url: "http://10.114.10.150/production/svnadmin/",
+    web_url: "http://localhost:3000/projects/projct-10name/",
     topics: ["example", "doc"],
     name: "project01 name",
     path: "project01-name",

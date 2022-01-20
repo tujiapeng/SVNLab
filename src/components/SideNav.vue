@@ -9,9 +9,10 @@
     <!-- 导航栏内容 -->
     <ul class="mb-8 px-2 py-4">
       <!-- 菜单1 -->
-      <li v-for="navItem in nav_tree" :key="navItem.id">
+      <li v-for="navItem in navTree" :key="navItem.id">
         <div>
-          <span
+          <div class="bg-gray-300">
+            <a
             class="
               px-1
               pr-2
@@ -21,9 +22,11 @@
               text-gray-700
               tracking-wide
             "
-            >{{ navItem.title }}</span
+            >{{ navItem.title }}</a
           >
-          <font-awesome-icon :icon="navItem.icon" />
+          <font-awesome-icon class="float-right mr-2" :icon="navItem.icon" />
+          </div>
+          <!-- 子菜单 -->
           <ul v-for="subItem in navItem.sub_nav_items" :key="subItem.id">
             <li
               class="
@@ -56,79 +59,9 @@
 </template>
 
 <script setup>
-// router items
-const nav_tree = [
-  {
-    id: 1,
-    title: "一级菜单1",
-    icon: "chevron-down",
-    sub_nav_items: [
-      {
-        id: 1,
-        name: "系统设置",
-        icon: "cog",
-        link_to: "/groups",
-      },
-      {
-        id: 2,
-        name: "系统分析",
-        icon: "chart-line",
-        link_to: "/groups",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "一级菜单2",
-    icon: "chevron-down",
-    sub_nav_items: [
-      {
-        id: 1,
-        name: "制品管理",
-        icon: "cubes",
-        link_to: "/groups",
-      },
-      {
-        id: 2,
-        name: "制品管理2",
-        icon: "cubes",
-        link_to: "/groups",
-      },
-      {
-        id: 3,
-        name: "制品管理3",
-        icon: "cubes",
-        link_to: "/groups",
-      },
-      {
-        id: 4,
-        name: "制品管理4",
-        icon: "cubes",
-        link_to: "/groups",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "一级菜单3",
-    icon: "chevron-down",
-    sub_nav_items: [
-      {
-        id: 1,
-        name: "系统设置",
-        icon: "cog",
-        link_to: "/groups",
-      },
-      {
-        id: 2,
-        name: "系统分析",
-        icon: "chart-line",
-        link_to: "/groups",
-      },
-    ],
-  },
-];
-
+defineProps([
+  "navTree",
+]);
 
 // func test
 import { ref } from "vue";

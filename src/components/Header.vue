@@ -11,7 +11,7 @@
       <div id="header-menu" class="flex">
         <ul class="flex text-lg">
           <li>
-            <router-link to="/projects"
+            <router-link to="/projectOps"
               class="ml-3 pl-2 pr-2 rounded hover:bg-gray-300"
             >
               Project
