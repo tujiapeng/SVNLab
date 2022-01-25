@@ -11,26 +11,26 @@
       <!-- 菜单1 -->
       <li v-for="navItem in navTree" :key="navItem.id">
         <div>
-          <div class="bg-gray-300">
+          <div class="bg-indigo-100">
             <a
-            class="
-              px-1
-              pr-2
-              my-4
-              text-lg
-              font-semibold
-              text-gray-700
-              tracking-wide
-            "
-            >{{ navItem.title }}</a
-          >
-          <font-awesome-icon class="float-right mr-2" :icon="navItem.icon" />
+              class="
+                px-1
+                pr-2
+                my-4
+                text-lg
+                font-semibold
+                text-gray-700
+                tracking-wide
+              "
+              >{{ navItem.title }}</a
+            >
+            <font-awesome-icon class="float-right mr-2" :icon="navItem.icon" />
           </div>
           <!-- 子菜单 -->
           <ul v-for="subItem in navItem.sub_nav_items" :key="subItem.id">
             <li
               class="
-                px-4
+                px-1
                 py-1
                 hover:border-l-4 hover:border-blue-400 hover:bg-blue-100
                 cursor-pointer
@@ -39,10 +39,10 @@
                 items-center
               "
             >
-              <font-awesome-icon :icon="subItem.icon" />
-              <router-link :to="subItem.link_to" class="pl-2">{{
-                subItem.name
-              }}</router-link>
+              <router-link :to="subItem.link_to" class="w-full">
+                <font-awesome-icon :icon="subItem.icon" />
+                <span class="pl-2">{{ subItem.name }}</span>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -59,9 +59,7 @@
 </template>
 
 <script setup>
-defineProps([
-  "navTree",
-]);
+defineProps(["navTree"]);
 
 // func test
 import { ref } from "vue";
@@ -71,7 +69,6 @@ const n = ref(18);
 const nInc = () => {
   n.value++;
 };
-
 </script>
 
 <style></style>

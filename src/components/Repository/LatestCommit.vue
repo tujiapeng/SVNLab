@@ -16,7 +16,7 @@
       <div class="flex ml-5 items-center">
         <!-- 最后提交成员 -->
         <div
-          id="project-avator"
+          id="member-avator"
           class="w-10 h-10 rounded-md text-center align-middle bg-gray-200"
         >
           <a href="" class="text-4xl">M</a>

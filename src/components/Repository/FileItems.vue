@@ -32,7 +32,7 @@
         "
       >
         <font-awesome-icon :icon="item.type" class="mr-2" />
-        <span class="w-1/3">{{ item.item_name }}</span>
+        <span class="w-1/3">{{ item.name }}</span>
         <span class="w-1/3">{{ item.commit_info }}</span>
         <span class="w-1/3 text-right">{{ item.last_modified_time }}</span>
       </li>

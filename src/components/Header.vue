@@ -11,14 +11,16 @@
       <div id="header-menu" class="flex">
         <ul class="flex text-lg">
           <li>
-            <router-link to="/projectOps"
+            <router-link
+              to="/projectOps"
               class="ml-3 pl-2 pr-2 rounded hover:bg-gray-300"
             >
               Project
             </router-link>
           </li>
           <li>
-            <router-link to="/groups"
+            <router-link
+              to="/groups"
               class="ml-3 pl-2 pr-2 rounded hover:bg-gray-300"
             >
               Groups
@@ -54,9 +56,9 @@
         <li>
           <div id="top-search">
             <input
+              id="top-search-bar"
               type="search"
               name="topsearchbar"
-              id="top-search-bar"
               placeholder="search project"
               class="
                 mr-1
@@ -65,7 +67,7 @@
                 rounded
                 focus:outline-none focus:border-sky-500
               "
-            />
+            >
           </div>
         </li>
         <li>
