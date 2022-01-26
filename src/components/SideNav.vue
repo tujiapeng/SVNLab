@@ -2,12 +2,14 @@
   <div>
     <!-- 导航栏标题 -->
     <div id="nav-title">
-      <p class="text-2xl px-4 py-2 pt-4 text-left align-text-bottom">
-        后台管理
+      <p
+        class="text-2xl px-2 py-3 align-text-bottom truncate hover:bg-gray-300"
+      >
+        {{ navTitle }}
       </p>
     </div>
     <!-- 导航栏内容 -->
-    <ul class="mb-8 px-2 py-4">
+    <ul class="mb-8 px-2">
       <!-- 菜单1 -->
       <li v-for="navItem in navTree" :key="navItem.id">
         <div>
@@ -59,7 +61,7 @@
 </template>
 
 <script setup>
-defineProps(["navTree"]);
+defineProps(["navTree", "navTitle"]);
 
 // func test
 import { ref } from "vue";

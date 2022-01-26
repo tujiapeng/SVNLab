@@ -73,35 +73,77 @@
 
     <!-- commit items -->
     <div class="my-5">
-      <ol  v-for="commit in commit_list" :key="commit.id" >
-          <!-- time -->
+      <ol v-for="commit in commit_list" :key="commit.id">
+        <!-- time -->
         <li class="bg-gray-50 border-b text-lg">
           <a href="" class="text-gray-600">{{ commit.commit_time }} 提交</a>
         </li>
-        
+
         <!-- detail  -->
         <li class="h-20 border-b flex items-center justify-between">
-            <div class="flex items-center">
-          <!-- 最后提交成员 -->
-          <div
-            class="w-10 h-10 rounded-md flex items-center justify-center bg-blue-100"
-          >
-            <a href="" class="text-3xl">U</a>
-          </div>
-          <div class="ml-2">
+          <div class="flex items-center">
+            <!-- 最后提交成员 -->
+            <div
+              class="
+                w-10
+                h-10
+                rounded-md
+                flex
+                items-center
+                justify-center
+                bg-blue-100
+              "
+            >
+              <a href="" class="text-3xl">U</a>
+            </div>
+            <div class="ml-2">
               <a href="" class="font-semibold">{{ commit.commit_note }}</a>
               <p class="text-gray-600">
-                  由
-                  <a href="" class="text-black px-1">{{ commit.commit_user }}</a>
-                  <span>提交于 {{ commit.commit_time }}</span>
+                由
+                <a href="" class="text-black px-1">{{ commit.commit_user }}</a>
+                <span>提交于 {{ commit.commit_time }}</span>
               </p>
-          </div>
             </div>
-        <!-- end of detail  -->
+          </div>
+          <!-- end of detail  -->
 
-        <!-- copy sha1   -->
-        <div class="flex">
-            <p class="border rounded-l-md px-3 py-2 bg-gray-50">{{ commit.commit_id }}</p>
+          <div class="flex">
+            <!-- pipeline -->
+            <button
+              v-if="commit.pipeline_stat"
+              class="
+                mr-5
+                px-3
+                py-2
+                border
+                rounded-md
+                text-green-600
+                border-gray-200
+                hover:bg-gray-200
+              "
+            >
+              <font-awesome-icon icon="check-circle" />
+            </button>
+            <button
+              v-else="!commit.pipeline_stat"
+              class="
+                mr-5
+                px-3
+                py-2
+                border
+                rounded-md
+                text-red-600
+                border-gray-200
+                hover:bg-gray-200
+              "
+            >
+              <font-awesome-icon icon="times-circle" />
+            </button>
+            <!-- end of pipeline -->
+            <!-- copy sha1   -->
+            <p class="border rounded-l-md px-3 py-2 bg-gray-50">
+              {{ commit.commit_id }}
+            </p>
             <button
               class="
                 px-3
@@ -127,8 +169,8 @@
             >
               <font-awesome-icon icon="folder-open" />
             </button>
-        </div>
-        <!-- end of copy sha1 -->
+          </div>
+          <!-- end of copy sha1 -->
         </li>
       </ol>
     </div>
@@ -140,21 +182,22 @@
 import Crumbs from "@/components/Crumbs.vue";
 
 const commit_list = [
-    {
-        id: 1,
-        commit_time: "2022-01-25 17:51",
-        commit_note: "测试用例完善2",
-        commit_user: "Tom Hanks",
-        commit_id: "9a27bde"
-    },
-    {
-        id: 2,
-        commit_time: "2022-01-05 10:01",
-        commit_note: "测试用例完善1",
-        commit_user: "King kelly",
-        commit_id: "3fe0c922"
-    }
-]
-
+  {
+    id: 1,
+    commit_time: "2022-01-25 17:51",
+    commit_note: "测试用例完善2",
+    commit_user: "Tom Hanks",
+    commit_id: "9a27bde",
+    pipeline_stat: true,
+  },
+  {
+    id: 2,
+    commit_time: "2022-01-05 10:01",
+    commit_note: "测试用例完善1",
+    commit_user: "King kelly",
+    commit_id: "3fe0c922",
+    pipeline_stat: false,
+  },
+];
 </script>
 <style></style>
