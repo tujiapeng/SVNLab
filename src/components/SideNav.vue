@@ -3,13 +3,13 @@
     <!-- 导航栏标题 -->
     <div id="nav-title">
       <p
-        class="text-2xl px-2 py-3 align-text-bottom truncate hover:bg-gray-300"
+        class="text-2xl px-2 py-3 align-text-bottom truncate text-gray-600 hover:bg-gray-300"
       >
         {{ navTitle }}
       </p>
     </div>
     <!-- 导航栏内容 -->
-    <ul class="mb-8 px-2">
+    <ul class="mb-8 pl-2">
       <!-- 菜单1 -->
       <li v-for="navItem in navTree" :key="navItem.id">
         <div>
