@@ -70,7 +70,7 @@ const nav_tree = [
       {
         id: 4,
         name: "标签",
-        icon: "tag",
+        icon: "tags",
         link_to: "/projectOps/Project/RepoTags",
       },
       {
