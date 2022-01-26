@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <div class="w-48 min-w-min shadow-lg bg-gray-100 overflow-hidden">
-      <SideNav :navTree="nav_tree" />
+      <SideNav :navTree="nav_tree" :navTitle="project.name" />
     </div>
     <div class="w-full mx-4 py-4">
       <!-- <RepoFiles /> -->
@@ -12,6 +12,11 @@
 
 <script setup>
 import SideNav from "@/components/SideNav.vue";
+
+const project = {
+  name: 'project name'
+}
+
 // router items
 const nav_tree = [
   {
@@ -28,7 +33,7 @@ const nav_tree = [
       {
         id: 2,
         name: "动态",
-        icon: "meteor",
+        icon: "fan",
         link_to: "/projectOps/Project/ProjectActivity",
       },
       {
@@ -47,7 +52,7 @@ const nav_tree = [
       {
         id: 1,
         name: "文件",
-        icon: "cog",
+        icon: "file-code",
         link_to: "/projectOps/Project/RepoFiles",
       },
       {
@@ -195,7 +200,7 @@ const nav_tree = [
       {
         id: 5,
         name: "Incidents",
-        icon: "bomb",
+        icon: "meteor",
         link_to: "/projectOps/Project/OperationIncidents",
       },
       {
