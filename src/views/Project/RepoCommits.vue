@@ -125,7 +125,7 @@
               <font-awesome-icon icon="check-circle" />
             </button>
             <button
-              v-else="!commit.pipeline_stat"
+              v-if="!commit.pipeline_stat"
               class="
                 mr-5
                 px-3
