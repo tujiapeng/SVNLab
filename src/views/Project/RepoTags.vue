@@ -99,7 +99,7 @@
     </div>
 
     <!-- link and buttons  -->
-    <div class="flex items-center gap-x-2">
+    <div class="flex items-center gap-x-2 text-gray-500">
         <button
               class="
                 px-3
@@ -134,7 +134,7 @@
                   hover:bg-gray-100 hover:cursor-not-allowed
                 "
               >
-                <font-awesome-icon icon="pencil-alt" class="mx-2 text-gray-400" />
+                <font-awesome-icon icon="pencil-alt" class="mx-2" />
               </button>
           <button
                 class="
@@ -145,7 +145,7 @@
                   hover:bg-gray-100 hover:cursor-not-allowed
                 "
               >
-                <font-awesome-icon icon="trash" class="mx-2 text-gray-400" />
+                <font-awesome-icon icon="trash" class="mx-2" />
               </button>
     </div>
     <!-- end of buttons -->
