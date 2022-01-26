@@ -68,27 +68,31 @@
   <!-- end of nav bar -->
 
   <!-- tag list  -->
-  <div v-for="tag in tag_list" :key="tag.id" class="pt-2 flex content-center justify-between  text-gray-600 border-t">
+  <div
+    v-for="tag in tag_list"
+    :key="tag.id"
+    class="pt-2 flex content-center justify-between text-gray-600 border-t"
+  >
     <!-- tag log item  -->
     <div class="py-3">
-        <!-- tag info -->
+      <!-- tag info -->
       <div>
-        <font-awesome-icon icon="tag"/>
+        <font-awesome-icon icon="tag" />
         <span class="mx-3 font-semibold">{{ tag.name }}</span>
         <span>{{ tag.note }}</span>
       </div>
       <!-- tag commit  -->
       <div class="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.876-1.008a4.002 4.002 0 0 1-7.752 0A1.01 1.01 0 0 1 4 9H1a1 1 0 1 1 0-2h3c.042 0 .083.003.124.008a4.002 4.002 0 0 1 7.752 0A1.01 1.01 0 0 1 12 7h3a1 1 0 0 1 0 2h-3a1.01 1.01 0 0 1-.124-.008z"
-            />
-          </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.876-1.008a4.002 4.002 0 0 1-7.752 0A1.01 1.01 0 0 1 4 9H1a1 1 0 1 1 0-2h3c.042 0 .083.003.124.008a4.002 4.002 0 0 1 7.752 0A1.01 1.01 0 0 1 12 7h3a1 1 0 0 1 0 2h-3a1.01 1.01 0 0 1-.124-.008z"
+          />
+        </svg>
         <a href="" class="mx-2 text-blue-600">{{ tag.commit_id }}</a>
         <span>&#8226;</span>
         <a href="" class="mx-2">{{ tag.commit_note }}</a>
@@ -100,53 +104,53 @@
 
     <!-- link and buttons  -->
     <div class="flex items-center gap-x-2 text-gray-500">
-        <button
-              class="
-                px-3
-                py-2
-                border
-                rounded-md
-                text-red-600
-                border-gray-200
-                hover:bg-gray-200
-              "
-            >
-              <font-awesome-icon icon="times-circle" />
-            </button>
-            <button
-            class="
-              border
-              rounded-md
-              px-2
-              py-2
-              hover:border-gray-400 hover:bg-gray-100
-            "
-          >
-            <font-awesome-icon icon="download" class="mx-2" />
-            <font-awesome-icon icon="chevron-down" class="mx-2" />
-          </button>
-          <button
-                class="
-                  border
-                  rounded-md
-                  px-2
-                  py-2
-                  hover:bg-gray-100 hover:cursor-not-allowed
-                "
-              >
-                <font-awesome-icon icon="pencil-alt" class="mx-2" />
-              </button>
-          <button
-                class="
-                  border
-                  rounded-md
-                  px-2
-                  py-2
-                  hover:bg-gray-100 hover:cursor-not-allowed
-                "
-              >
-                <font-awesome-icon icon="trash" class="mx-2" />
-              </button>
+      <button
+        class="
+          px-3
+          py-2
+          border
+          rounded-md
+          text-red-600
+          border-gray-200
+          hover:bg-gray-200
+        "
+      >
+        <font-awesome-icon icon="times-circle" />
+      </button>
+      <button
+        class="
+          border
+          rounded-md
+          px-2
+          py-2
+          hover:border-gray-400 hover:bg-gray-100
+        "
+      >
+        <font-awesome-icon icon="download" class="mx-2" />
+        <font-awesome-icon icon="chevron-down" class="mx-2" />
+      </button>
+      <button
+        class="
+          border
+          rounded-md
+          px-2
+          py-2
+          hover:bg-gray-100 hover:cursor-not-allowed
+        "
+      >
+        <font-awesome-icon icon="pencil-alt" class="mx-2" />
+      </button>
+      <button
+        class="
+          border
+          rounded-md
+          px-2
+          py-2
+          hover:bg-gray-100 hover:cursor-not-allowed
+        "
+      >
+        <font-awesome-icon icon="trash" class="mx-2" />
+      </button>
     </div>
     <!-- end of buttons -->
   </div>
@@ -157,30 +161,30 @@
 import Crumbs from "@/components/Crumbs.vue";
 
 const tag_list = [
-    {
-        id: 1,
-        name: "1.6.2",
-        note: "Stable version 1.6.2",
-        commit_id: "f36518ea",
-        commit_note: "Update update-url on index page",
-        commit_time: "2015-08-02 12:01"
-    },
-    {
-        id: 2,
-        name: "1.6.1",
-        note: "Critical fixes release (2)",
-        commit_id: "edb40958",
-        commit_note: "Change version to 1.6.1",
-        commit_time: "2014-06-03 10:30"
-    },
-    {
-        id: 3,
-        name: "1.6.0",
-        note: "",
-        commit_id: "cc235959",
-        commit_note: "* Set official release version 1.6.0",
-        commit_time: "2015-03-02 12:01"
-    }
-]
+  {
+    id: 1,
+    name: "1.6.2",
+    note: "Stable version 1.6.2",
+    commit_id: "f36518ea",
+    commit_note: "Update update-url on index page",
+    commit_time: "2015-08-02 12:01",
+  },
+  {
+    id: 2,
+    name: "1.6.1",
+    note: "Critical fixes release (2)",
+    commit_id: "edb40958",
+    commit_note: "Change version to 1.6.1",
+    commit_time: "2014-06-03 10:30",
+  },
+  {
+    id: 3,
+    name: "1.6.0",
+    note: "",
+    commit_id: "cc235959",
+    commit_note: "* Set official release version 1.6.0",
+    commit_time: "2015-03-02 12:01",
+  },
+];
 </script>
 <style></style>
