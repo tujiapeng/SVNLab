@@ -47,37 +47,10 @@
     <!-- charts  -->
     <div class="my-5 grid grid-cols-2 gap-8">
       <!-- chart items -->
-      <div class="w-full h-80">
+      <div v-for="member in member_list" :key="member.id" class="w-full h-80">
         <CommChart
           :chartType="'line'"
-          :chartTitle="'Will Smith'"
-          :chartLegend="['Number of Commit']"
-          :chartXData="[0, 0, 0, 0, 0, 20, 5, 20, 7, 13, 3, 5]"
-          :chart-x-title="moonthSeq"
-        />
-      </div>
-      <div class="w-full h-80">
-        <CommChart
-          :chartType="'line'"
-          :chartTitle="'Will Smith'"
-          :chartLegend="['Number of Commit']"
-          :chartXData="[0, 0, 0, 0, 0, 20, 5, 20, 7, 13, 3, 5]"
-          :chart-x-title="moonthSeq"
-        />
-      </div>
-      <div class="w-full h-80">
-        <CommChart
-          :chartType="'line'"
-          :chartTitle="'Will Smith'"
-          :chartLegend="['Number of Commit']"
-          :chartXData="[0, 0, 0, 0, 0, 20, 5, 20, 7, 13, 3, 5]"
-          :chart-x-title="moonthSeq"
-        />
-      </div>
-      <div class="w-full h-80">
-        <CommChart
-          :chartType="'line'"
-          :chartTitle="'Will Smith'"
+          :chartTitle="member.name"
           :chartLegend="['Number of Commit']"
           :chartXData="[0, 0, 0, 0, 0, 20, 5, 20, 7, 13, 3, 5]"
           :chart-x-title="moonthSeq"
@@ -95,5 +68,25 @@ import Crumbs from "@/components/Crumbs.vue";
 import CommChart from "../../components/Charts/CommChart.vue";
 
 const moonthSeq = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.', 'Jul.', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.']
+
+const member_list = [
+  {
+    id: 1,
+    name: 'John',
+  },
+  {
+    id: 2,
+    name: 'Will Smith',
+  },
+  {
+    id: 3,
+    name: 'Willson',
+  },
+  {
+    id: 4,
+    name: 'Mike',
+  }
+]
+
 </script>
 <style></style>
