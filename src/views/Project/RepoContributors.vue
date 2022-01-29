@@ -45,6 +45,46 @@
     </div>
 
     <!-- charts  -->
+    <div class="my-5 grid grid-cols-2 gap-8">
+      <!-- chart items -->
+      <div class="w-full h-80">
+        <CommChart
+          :chartType="'line'"
+          :chartTitle="'Will Smith'"
+          :chartLegend="['Number of Commit']"
+          :chartXData="[0, 0, 0, 0, 0, 20, 5, 20, 7, 13, 3, 5]"
+          :chart-x-title="moonthSeq"
+        />
+      </div>
+      <div class="w-full h-80">
+        <CommChart
+          :chartType="'line'"
+          :chartTitle="'Will Smith'"
+          :chartLegend="['Number of Commit']"
+          :chartXData="[0, 0, 0, 0, 0, 20, 5, 20, 7, 13, 3, 5]"
+          :chart-x-title="moonthSeq"
+        />
+      </div>
+      <div class="w-full h-80">
+        <CommChart
+          :chartType="'line'"
+          :chartTitle="'Will Smith'"
+          :chartLegend="['Number of Commit']"
+          :chartXData="[0, 0, 0, 0, 0, 20, 5, 20, 7, 13, 3, 5]"
+          :chart-x-title="moonthSeq"
+        />
+      </div>
+      <div class="w-full h-80">
+        <CommChart
+          :chartType="'line'"
+          :chartTitle="'Will Smith'"
+          :chartLegend="['Number of Commit']"
+          :chartXData="[0, 0, 0, 0, 0, 20, 5, 20, 7, 13, 3, 5]"
+          :chart-x-title="moonthSeq"
+        />
+      </div>
+    </div>
+
     <!-- end of charts  -->
   </div>
   <!-- end of comit charts -->
@@ -52,5 +92,8 @@
 
 <script setup>
 import Crumbs from "@/components/Crumbs.vue";
+import CommChart from "../../components/Charts/CommChart.vue";
+
+const moonthSeq = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.', 'Jul.', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.']
 </script>
 <style></style>
