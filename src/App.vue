@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <router-view class="pt-14"></router-view>
+  <router-view class="pt-14" />
 </template>
 
 <script setup>
