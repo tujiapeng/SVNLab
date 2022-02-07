@@ -84,6 +84,12 @@ const nav_tree = [
         name: "分支图",
         icon: "project-diagram",
         link_to: "/projectOps/Project/RepoGraph",
+      },
+      {
+        id: 7,
+        name: "比对",
+        icon: "exchange-alt",
+        link_to: "/projectOps/Project/RepoCompare",
       }
     ],
   },
