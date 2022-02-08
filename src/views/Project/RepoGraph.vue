@@ -59,6 +59,12 @@ const repoCommitLog = [
         message: "merge staging",
         uname: "uname3 <u3@example.com>",
       },
+      {
+        event: "tag",
+        branch: "main",
+        tag: "v1.2",
+        uname: "uname3 <u3@example.com>",
+      }
     ]
 </script>
 <style></style>

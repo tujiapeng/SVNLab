@@ -14,7 +14,7 @@ const GraphProps = defineProps({
   },
   commitUrl: {
     type: String,
-    default: "",
+    default: "/commit",
   },
   eventLog: {
     type: Array,
@@ -61,10 +61,11 @@ function init() {
   // log event replay
   for (let cmt of GraphProps.eventLog) {
     if (cmt.event === "merge") {
-      // bdict["main"].merge("dev", "add feature");
-      // console.log("merge")
       bdict[cmt.branch].merge(cmt.from, cmt.message);
-      //bdict[cmt.branch].merge(bdict[cmt.from], cmt.message);
+      continue;
+    }
+    if (cmt.event === "tag") {
+      bdict[cmt.branch].tag(cmt.tag);
       continue;
     }
 
@@ -77,6 +78,9 @@ function init() {
           subject: cmt.message,
           hash: cmt.hash,
           author: cmt.uname,
+          onMessageClick(commit){
+            location.href = `${GraphProps.commitUrl}/${commit.hash}`;
+          }
         });
       case "branch":
         bdict[cmt.branch] = mygraph.branch({
@@ -85,6 +89,8 @@ function init() {
         });
       //case "merge":
       //   bdict[cmt.branch].merge(cmt.from, cmt.message);
+      // case "tag":
+      //   bdict[cmt.branch] = bdict[cmt.branch].tag(cmt.tag)
       default:
         continue;
     }
