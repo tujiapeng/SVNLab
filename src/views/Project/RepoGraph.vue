@@ -1,6 +1,12 @@
 <template>
-    <h1>RepoGraph</h1>
+  <Crumbs />
+  <div class="m-5">
+    <gitGraph />
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Crumbs from "@/components/Crumbs.vue";
+import GitGraph from "@/components/Charts/GitGraph.vue";
+</script>
 <style></style>
