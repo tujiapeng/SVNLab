@@ -1,160 +1,162 @@
 <template>
-  <Crumbs />
+  <div>
+    <Crumbs />
 
-  <!-- tag nav bar -->
-  <div class="py-3 flex justify-between items-center">
-    <p class="w-1/2 truncate">
-      Tags give the ability to mark specific points in history as being
-      important
-    </p>
+    <!-- tag nav bar -->
+    <div class="py-3 flex justify-between items-center">
+      <p class="w-1/2 truncate">
+        Tags give the ability to mark specific points in history as being
+        important
+      </p>
 
-    <div class="flex gap-x-2">
-      <input
-        type="search"
-        name="commitFilter"
-        placeholder="Filter by tag name"
-        class="
-          px-3
-          h-10
-          w-64
-          text-lg
-          border
-          rounded-md
-          focus:outline-none focus:border-sky-300 focus:border-2
-        "
-      />
-      <button
-        class="
-          min-w-fit
-          border
-          rounded-md
-          h-10
-          px-2
-          hover:border-gray-400 hover:bg-gray-100
-        "
-      >
-        Last update
-        <font-awesome-icon icon="angle-down" class="mx-2" />
-      </button>
-      <button
-        class="
-          min-w-fit
-          h-10
-          w-10
-          border
-          rounded-md
-          text-gray-600
-          hover:border-gray-400 hover:bg-gray-100
-        "
-      >
-        <font-awesome-icon icon="rss" class="mx-2" />
-      </button>
-      <button
-        class="
-          min-w-fit
-          h-10
-          px-3
-          border
-          rounded-md
-          bg-blue-500
-          text-white
-          hover:bg-blue-600
-        "
-      >
-        New branch
-      </button>
-    </div>
-  </div>
-  <!-- end of nav bar -->
-
-  <!-- tag list  -->
-  <div
-    v-for="tag in tag_list"
-    :key="tag.id"
-    class="pt-2 flex content-center justify-between text-gray-600 border-t"
-  >
-    <!-- tag log item  -->
-    <div class="py-3">
-      <!-- tag info -->
-      <div>
-        <font-awesome-icon icon="tag" />
-        <span class="mx-3 font-semibold">{{ tag.name }}</span>
-        <span>{{ tag.note }}</span>
-      </div>
-      <!-- tag commit  -->
-      <div class="flex items-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
+      <div class="flex gap-x-2">
+        <input
+          type="search"
+          name="commitFilter"
+          placeholder="Filter by tag name"
+          class="
+            px-3
+            h-10
+            w-64
+            text-lg
+            border
+            rounded-md
+            focus:outline-none focus:border-sky-300 focus:border-2
+          "
+        />
+        <button
+          class="
+            min-w-fit
+            border
+            rounded-md
+            h-10
+            px-2
+            hover:border-gray-400 hover:bg-gray-100
+          "
         >
-          <path
-            d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.876-1.008a4.002 4.002 0 0 1-7.752 0A1.01 1.01 0 0 1 4 9H1a1 1 0 1 1 0-2h3c.042 0 .083.003.124.008a4.002 4.002 0 0 1 7.752 0A1.01 1.01 0 0 1 12 7h3a1 1 0 0 1 0 2h-3a1.01 1.01 0 0 1-.124-.008z"
-          />
-        </svg>
-        <a href="" class="mx-2 text-blue-600">{{ tag.commit_id }}</a>
-        <span>&#8226;</span>
-        <a href="" class="mx-2">{{ tag.commit_note }}</a>
-        <span>&#8226;</span>
-        <span class="mx-2">{{ tag.commit_time }}</span>
+          Last update
+          <font-awesome-icon icon="angle-down" class="mx-2" />
+        </button>
+        <button
+          class="
+            min-w-fit
+            h-10
+            w-10
+            border
+            rounded-md
+            text-gray-600
+            hover:border-gray-400 hover:bg-gray-100
+          "
+        >
+          <font-awesome-icon icon="rss" class="mx-2" />
+        </button>
+        <button
+          class="
+            min-w-fit
+            h-10
+            px-3
+            border
+            rounded-md
+            bg-blue-500
+            text-white
+            hover:bg-blue-600
+          "
+        >
+          New branch
+        </button>
       </div>
-      <!-- end of tag commit  -->
     </div>
+    <!-- end of nav bar -->
 
-    <!-- link and buttons  -->
-    <div class="flex items-center gap-x-2 text-gray-500">
-      <button
-        class="
-          px-3
-          py-2
-          border
-          rounded-md
-          text-red-600
-          border-gray-200
-          hover:bg-gray-200
-        "
-      >
-        <font-awesome-icon icon="times-circle" />
-      </button>
-      <button
-        class="
-          border
-          rounded-md
-          px-2
-          py-2
-          hover:border-gray-400 hover:bg-gray-100
-        "
-      >
-        <font-awesome-icon icon="download" class="mx-2" />
-        <font-awesome-icon icon="chevron-down" class="mx-2" />
-      </button>
-      <button
-        class="
-          border
-          rounded-md
-          px-2
-          py-2
-          hover:bg-gray-100 hover:cursor-not-allowed
-        "
-      >
-        <font-awesome-icon icon="pencil-alt" class="mx-2" />
-      </button>
-      <button
-        class="
-          border
-          rounded-md
-          px-2
-          py-2
-          hover:bg-gray-100 hover:cursor-not-allowed
-        "
-      >
-        <font-awesome-icon icon="trash" class="mx-2" />
-      </button>
+    <!-- tag list  -->
+    <div
+      v-for="tag in tag_list"
+      :key="tag.id"
+      class="pt-2 flex content-center justify-between text-gray-600 border-t"
+    >
+      <!-- tag log item  -->
+      <div class="py-3">
+        <!-- tag info -->
+        <div>
+          <font-awesome-icon icon="tag" />
+          <span class="mx-3 font-semibold">{{ tag.name }}</span>
+          <span>{{ tag.note }}</span>
+        </div>
+        <!-- tag commit  -->
+        <div class="flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.876-1.008a4.002 4.002 0 0 1-7.752 0A1.01 1.01 0 0 1 4 9H1a1 1 0 1 1 0-2h3c.042 0 .083.003.124.008a4.002 4.002 0 0 1 7.752 0A1.01 1.01 0 0 1 12 7h3a1 1 0 0 1 0 2h-3a1.01 1.01 0 0 1-.124-.008z"
+            />
+          </svg>
+          <a href="" class="mx-2 text-blue-600">{{ tag.commit_id }}</a>
+          <span>&#8226;</span>
+          <a href="" class="mx-2">{{ tag.commit_note }}</a>
+          <span>&#8226;</span>
+          <span class="mx-2">{{ tag.commit_time }}</span>
+        </div>
+        <!-- end of tag commit  -->
+      </div>
+
+      <!-- link and buttons  -->
+      <div class="flex items-center gap-x-2 text-gray-500">
+        <button
+          class="
+            px-3
+            py-2
+            border
+            rounded-md
+            text-red-600
+            border-gray-200
+            hover:bg-gray-200
+          "
+        >
+          <font-awesome-icon icon="times-circle" />
+        </button>
+        <button
+          class="
+            border
+            rounded-md
+            px-2
+            py-2
+            hover:border-gray-400 hover:bg-gray-100
+          "
+        >
+          <font-awesome-icon icon="download" class="mx-2" />
+          <font-awesome-icon icon="chevron-down" class="mx-2" />
+        </button>
+        <button
+          class="
+            border
+            rounded-md
+            px-2
+            py-2
+            hover:bg-gray-100 hover:cursor-not-allowed
+          "
+        >
+          <font-awesome-icon icon="pencil-alt" class="mx-2" />
+        </button>
+        <button
+          class="
+            border
+            rounded-md
+            px-2
+            py-2
+            hover:bg-gray-100 hover:cursor-not-allowed
+          "
+        >
+          <font-awesome-icon icon="trash" class="mx-2" />
+        </button>
+      </div>
+      <!-- end of buttons -->
     </div>
-    <!-- end of buttons -->
+    <!-- end of tag list  -->
   </div>
-  <!-- end of tag list  -->
 </template>
 
 <script setup>
