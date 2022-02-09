@@ -1,12 +1,7 @@
 <template>
-  <div class="flex">
-    <div class="w-48 min-w-min shadow-lg bg-gray-100 overflow-hidden">
-      <SideNav :navTree="nav_tree" :navTitle="project.name" />
-    </div>
-    <div class="w-full mx-4 py-4">
-      <!-- <RepoFiles /> -->
-      <router-view />
-    </div>
+  <div class="h-full flex">
+    <SideNav :navTree="nav_tree" :navTitle="project.name" />
+    <router-view class="w-full h-full overflow-y-scroll mx-4 py-4" />
   </div>
 </template>
 
@@ -14,8 +9,8 @@
 import SideNav from "@/components/SideNav.vue";
 
 const project = {
-  name: 'project name'
-}
+  name: "project name",
+};
 
 // router items
 const nav_tree = [
@@ -41,7 +36,7 @@ const nav_tree = [
         name: "发布",
         icon: "poll-h",
         link_to: "/projectOps/Project/ProjectRelease",
-      }
+      },
     ],
   },
   {
@@ -90,7 +85,7 @@ const nav_tree = [
         name: "比对",
         icon: "exchange-alt",
         link_to: "/projectOps/Project/RepoCompare",
-      }
+      },
     ],
   },
   {
@@ -127,7 +122,7 @@ const nav_tree = [
         name: "里程碑",
         icon: "map-signs",
         link_to: "/projectOps/Project/IssueMilestones",
-      }
+      },
     ],
   },
   {
@@ -159,7 +154,7 @@ const nav_tree = [
         icon: "calendar",
         link_to: "/projectOps/Project/CICDSchedules",
       },
-    ]
+    ],
   },
   {
     id: 5,
@@ -171,8 +166,8 @@ const nav_tree = [
         name: "配置",
         icon: "cog",
         link_to: "/projectOps/Project/SecAndCompliance",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 6,
@@ -237,9 +232,9 @@ const nav_tree = [
         id: 10,
         name: "FeatureFlags",
         icon: "flag",
-        link_to: "/projectOps/Project/OperationFeatureFlags"
-      }
-    ]
+        link_to: "/projectOps/Project/OperationFeatureFlags",
+      },
+    ],
   },
   {
     id: 7,
@@ -251,8 +246,8 @@ const nav_tree = [
         name: "配置",
         icon: "cog",
         link_to: "/projectOps/Project/PackagesRegistry",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 8,
@@ -269,15 +264,15 @@ const nav_tree = [
         id: 2,
         name: "Repository",
         icon: "box",
-        link_to: "/projectOps/Project/AnalyticsRepository"
+        link_to: "/projectOps/Project/AnalyticsRepository",
       },
       {
         id: 3,
         name: "ValueStream",
         icon: "bacon",
-        link_to: "/projectOps/Project/AnalyticsValueStream"
-      }
-    ]
+        link_to: "/projectOps/Project/AnalyticsValueStream",
+      },
+    ],
   },
   {
     id: 9,
@@ -289,8 +284,8 @@ const nav_tree = [
         name: "配置",
         icon: "cog",
         link_to: "/projectOps/Project/WikiSettings",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 10,
@@ -302,8 +297,8 @@ const nav_tree = [
         name: "配置",
         icon: "cog",
         link_to: "/projectOps/Project/SnippetsSettings",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 11,
@@ -315,8 +310,8 @@ const nav_tree = [
         name: "配置",
         icon: "cog",
         link_to: "/projectOps/Project/MembersSettings",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 12,
@@ -358,9 +353,9 @@ const nav_tree = [
         name: "CI/CD",
         icon: "pallet",
         link_to: "/projectOps/Project/SettingsCICD",
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];
 </script>
 

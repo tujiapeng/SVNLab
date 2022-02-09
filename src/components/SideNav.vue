@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-full w-48 min-w-min overflow-y-scroll py-2 bg-gray-100">
     <!-- 导航栏标题 -->
     <div id="nav-title">
       <p
@@ -17,7 +17,7 @@
       </p>
     </div>
     <!-- 导航栏内容 -->
-    <ul class="mb-8 pl-2">
+    <ul>
       <!-- 菜单项 -->
       <li v-for="navItem in navTree" :key="navItem.id">
         <div>
