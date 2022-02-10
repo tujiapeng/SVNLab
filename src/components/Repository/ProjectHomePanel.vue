@@ -102,7 +102,7 @@
       <ul class="flex">
         <li>
           <a href="#">
-            <font-awesome-icon icon="ankh" class="text-gray-500" />
+            <font-awesome-icon :icon="['fa', 'code-commit']" class="text-gray-500" />
             <span class="mx-2 font-semibold">21</span>
             <span>Commits</span>
           </a>

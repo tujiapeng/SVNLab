@@ -157,7 +157,7 @@
                 <span class="mx-1 rounded-lg px-2 bg-green-300">protected</span>
               </li>
               <li>
-                <font-awesome-icon icon="ankh" />
+                <font-awesome-icon :icon="['fa', 'code-commit']" />
                 <a href="" class="mx-1 ml-3">{{ activity.commit_id }}</a>
                 <span>&#8226;</span>
                 <a href="" class="mx-1">{{ activity.commit_note }}</a>

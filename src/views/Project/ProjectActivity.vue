@@ -66,7 +66,7 @@
     <a class="ml-2 text-gray-600">{{ activity.activity_info }}</a>
               </li>
               <li v-else-if="!activity.activity_info" class="my-1">
-                <font-awesome-icon icon="ankh" />
+                <font-awesome-icon :icon="['fa', 'code-commit']" />
                 <a class="ml-2 text-gray-600">Push to branch</a>
                 <a href="" class="ml-2 text-blue-600">{{ activity.branch }}</a>
               </li>
