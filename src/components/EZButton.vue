@@ -17,15 +17,6 @@
 </button>
 </template>
 <script setup>
-import { ref, onMounted } from "vue";
-const ezbtn = ref(); // create dom ref
-
-onMounted(() => {
-  init();
-});
-function init(){
-  console.log(ezbtn.value.attributes)
-}
 const btnProps = defineProps({
   size: {
     type: String,
