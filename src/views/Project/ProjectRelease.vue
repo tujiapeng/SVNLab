@@ -111,7 +111,7 @@
 
         <div class="text-gray-600 py-1">
           <a href="">
-            <font-awesome-icon icon="['fa', 'code-commit']" class="min-w-min" />
+            <font-awesome-icon :icon="['fa', 'code-commit']" class="min-w-min" />
             <span class="mx-3">{{ release.release_commit_id }}</span>
           </a>
         </div>
