@@ -32,68 +32,25 @@
 
       <!-- right -->
       <div>
-        <button
-          class="
-            border
-            rounded-md
-            h-8
-            border-gray-300
-            hover:bg-gray-200 hover:border-gray-400
-          "
-        >
+        <EZButton :size="'tiny'">
           <font-awesome-icon icon="bell" class="mx-2" />
           <font-awesome-icon icon="angle-down" class="mx-2" />
-        </button>
-
-        <button
-          class="
-            ml-2
-            border
-            rounded-l-md
-            h-8
-            border-gray-300
-            hover:bg-gray-200 hover:border-gray-400
-          "
-        >
+        </EZButton>
+        <EZButton :size="'tiny'" :shape="'left ml-2'">
           <font-awesome-icon icon="star" class="ml-2" />
           <span class="mx-2">Star</span>
-        </button>
-        <button
-          class="
-            border
-            rounded-r-md
-            h-8
-            border-gray-300
-            hover:bg-gray-200 hover:border-gray-400
-          "
-        >
+        </EZButton>
+        <EZButton :size="'tiny'" :shape="'right'">
           <span class="mx-2">0</span>
-        </button>
+        </EZButton>
 
-        <button
-          class="
-            ml-2
-            border
-            rounded-l-md
-            h-8
-            border-gray-300
-            hover:bg-gray-200 hover:border-gray-400
-          "
-        >
+        <EZButton :size="'tiny'" :shape="'left ml-2'">
           <font-awesome-icon icon="code-branch" class="ml-2" />
           <span class="mx-2">Fork</span>
-        </button>
-        <button
-          class="
-            border
-            rounded-r-md
-            h-8
-            border-gray-300
-            hover:bg-gray-200 hover:border-gray-400
-          "
-        >
+        </EZButton>
+        <EZButton :size="'tiny'" :shape="'right'">
           <span class="mx-2">0</span>
-        </button>
+        </EZButton>
       </div>
     </div>
 
@@ -170,5 +127,7 @@
   <!-- end of  project home panel -->
 </template>
 
-<script setup></script>
+<script setup>
+import EZButton from "@/components/EZButton.vue";
+</script>
 <style></style>
