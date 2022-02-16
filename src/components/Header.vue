@@ -26,7 +26,7 @@
         </router-link>
         <div class="w-24 hover:border-b-2 hover:border-b-blue-600 hover:text-indigo-700 cursor-pointer" @click="switchDisplayById('menuOnMore')">
           More
-          <font-awesome-icon icon="angle-down" class="mx-1" />
+          <font-awesome-icon icon="angle-down" class="text-base" />
           <div id="menuOnMore" style="display: none">
             <MenuList :menuItems="m1" />
           </div>
@@ -40,9 +40,9 @@
       <!-- nav icons -->
       <div id="navbar-collapse" class="flex text-gray-600 justify-end gap-x-1 pb-1">
         <!-- new -->
-        <button type="button" class="px-1 rounded hover:bg-gray-300" @click="switchDisplayById('menuOnAdd')">
+        <button type="button" class="px-2 rounded hover:bg-gray-300 min-w-fit" @click="switchDisplayById('menuOnAdd')">
           <font-awesome-icon icon="plus-square" class="mx-1" />
-          <font-awesome-icon icon="angle-down" class="mx-1" />
+          <font-awesome-icon icon="angle-down" class="mx-1 text-sm" />
           <div id="menuOnAdd" style="display: none">
             <MenuList :menuItems="m2" />
           </div>
@@ -70,28 +70,31 @@
           <font-awesome-icon icon="check-square" />
         </button>
         <!-- help -->
-        <button type="button" class="px-2 rounded hover:bg-gray-300" @click="switchDisplayById('menuOnHelp')">
-          <font-awesome-icon icon="question-circle" />
-          <font-awesome-icon icon="angle-down" class="mx-1" />
+        <button type="button" class="px-2 rounded hover:bg-gray-300 min-w-fit" @click="switchDisplayById('menuOnHelp')">
+          <font-awesome-icon icon="question-circle" class="mx-1"/>
+          <font-awesome-icon icon="angle-down" class="mx-1 text-sm" />
           <div id="menuOnHelp" style="display: none" class="-ml-20">
             <MenuList :menuItems="m2" />
           </div>
         </button>
         <!-- user avatar  -->
-        <button
-          type="button"
+        <div
           class="
+            min-w-fit
+            flex items-center justify-between
             mr-2
-            px-1
+            px-2
+            text-sm
             rounded-full
-            w-28
-            truncate
             bg-indigo-300
             hover:bg-blue-500 hover:text-white
           "
+          title="John Weak asdf"
         >
-          John-Weak
-        </button>
+        <p class="px-1 w-20 truncate">John-Weak asdf </p>
+          <!-- <span class="w-28 truncate">John-Weak</span> -->
+          <font-awesome-icon icon="angle-down"/>
+        </div>
       </div>
       <!-- end of nav icons -->
     </div>
