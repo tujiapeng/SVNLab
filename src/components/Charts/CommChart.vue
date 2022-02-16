@@ -1,9 +1,9 @@
 <template>
-  <div ref="chart" class="w-full h-full bg-blue-50"></div>
+  <div ref="chartContainer" class="w-full h-full bg-blue-50"></div>
 </template>
 
 <script setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive, onMounted, watch, toRefs } from "vue";
 import * as echarts from "echarts";
 
 // 组件参数定义
@@ -29,15 +29,15 @@ const chartProps = defineProps({
     default: [15, 20, 30],
   },
 });
+const { chartXData } = toRefs(chartProps)
 
-const chart = ref(); // create dom ref
+const chartContainer = ref(); // create dom ref
+const myChart = ref();
 
 onMounted(() => {
   init();
 });
-function init() {
-  // init chart
-  var myChart = echarts.init(chart.value);
+function optionInit() {
   // chart data and form
   var option = {
     title: {
@@ -59,10 +59,30 @@ function init() {
       },
     ],
   };
+  return option
+}
+function init() {
+  // init chart
+  myChart.value = echarts.init(chartContainer.value);
 
   // make chart
-  myChart.setOption(option);
+  myChart.value.setOption(optionInit());
 }
+
+watch(
+  chartXData,
+  (newChartXData) => {
+    myChart.value.setOption(optionInit());
+  },
+  { deep: true }
+)
+
+// window.addEventListener("resize", () => {
+//   //myChart.value.resize();
+//   if (myChart.value) {
+//     myChart.value.resize();
+//   }
+// })
 </script>
 
 <style></style>
