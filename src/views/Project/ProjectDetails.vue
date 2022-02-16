@@ -1,6 +1,6 @@
 /* eslint-disable vue/multi-word-component-names */
 <template>
-  <div id="repo-content-body" class="w-full mx-2 px-4">
+  <div id="repo-content-body" class="w-full">
     <!-- content -->
     <Crumbs />
 

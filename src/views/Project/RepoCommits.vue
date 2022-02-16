@@ -1,5 +1,5 @@
 <template>
-  <div id="projectActivity-content-body" class="w-full mx-2 px-4">
+  <div id="projectActivity-content-body" class="w-full">
     <Crumbs />
 
     <!-- nav bar -->

@@ -1,5 +1,5 @@
 <template>
-  <div id="repo-content-body" class="w-full mx-2 px-4">
+  <div id="repo-content-body" class="w-full">
     <Crumbs />
 
     <!-- release items  -->

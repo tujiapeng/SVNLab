@@ -1,7 +1,7 @@
 <template>
   <div class="h-full flex">
-    <SideNav :navTree="nav_tree" :navTitle="project.name" />
-    <router-view class="w-full h-full overflow-y-scroll px-6 py-4" />
+    <SideNav :navTree="nav_tree" :navTitle="project.name" class="w-max" />
+    <router-view class="w-full h-full overflow-y-scroll px-14 py-4" />
   </div>
 </template>
 
