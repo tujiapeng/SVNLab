@@ -24,7 +24,7 @@ const btnProps = defineProps({
   },
   shape: {
     type: String,
-    default: "normal"
+    default: ""
   }
 })
 
